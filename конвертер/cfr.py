@@ -966,9 +966,8 @@ def win2():
             if a == 0:
                 Ms.zero()
             else:
-                result = str('{:.3f}'.format(a/1000)) + str(' s')
-                EntryB.delete(0, END)
-                EntryB.insert(0, result)
+                result = a/1000
+                Label23.config(text = 'Результат: ' + str('{:.3f}'.format(result)) + ' ' + 's')
         #============================================
         def msVmin():
             a = EntryA.get()
@@ -976,9 +975,8 @@ def win2():
             if a == 0:
                 Ms.zero()
             else:
-                result = str('{:.6f}'.format(a/60000)) + str(' min')
-                EntryB.delete(0, END)
-                EntryB.insert(0, result)
+                result = a/60000
+                Label23.config(text = 'Рузультат: ' + str('{:.6f}'.format(result)) + ' ' + 'min')
         #============================================
         def msVh():
             a = EntryA.get()
@@ -986,9 +984,8 @@ def win2():
             if a == 0:
                 Ms.zero()
             else:
-                result = str('{:.6f}'.format(a/(3.6*10**6))) + str(' h')
-                EntryB.delete(0, END)
-                EntryB.insert(0, result)
+                result = a/(3.6*10**6)
+                Label23.config(text = 'Результат: ' + str('{:.6f}'.format(result)) + ' ' + 'h')
         #============================================
         def msVd():
             a = EntryA.get()
@@ -996,9 +993,8 @@ def win2():
             if a == 0:
                 Ms.zero()
             else:
-                result = str('{:.8f}'.format(a/(8.64*10**7))) + str(' d')
-                EntryB.delete(0, END)
-                EntryB.insert(0, result)
+                result = a/(8.64*10**7)
+                Label23.config(text = 'Рузультат: ' + str('{:.8f}'.format(result)) + ' ' + 'd')
         #============================================
         def msVwk():
             a = EntryA.get()
@@ -1006,9 +1002,8 @@ def win2():
             if a == 0:
                 Ms.zero()
             else:
-                result = str('{:.6f}'.format(a/(6.048*10**6))) + str(' wk')
-                EntryB.delete(0, END)
-                EntryB.insert(0, result)
+                result = a/(6.048*10**6)
+                Label23.config(text = 'Результат: ' + str('{:.6f}'.format(result)) + ' ' + 'wk')
         #============================================
     class S():
         def zero():
