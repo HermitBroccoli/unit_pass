@@ -10,744 +10,7 @@ from tkinter import ttk
 #xx = time.localtime()
 xx =time.strftime("%H:%M:%S")
 
-#операции                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-#--------------------------------------------------------------------------------------------------------------------------------------------------}
-def win1():
-    #=======================================================================================================a
-    dlina = Tk()
-    dlina.title('Длина')
-    w = dlina.winfo_screenwidth()
-    h = dlina.winfo_screenheight()
-    w = w // 2
-    h = h // 2 
-    w = w - 300
-    h = h - 300
-    dlina.geometry('500x425+{}+{}'.format(w, h))
-    dlina.iconbitmap('g.ico')
-    dlina.focus_force()
-    #=======================================================================================================
-    #операци
-    #=======================================================================================================
-    def sbros():
-        rt.set(' ')
-        rt1.set(' ')
-        EntryA.delete(0, END)
-        Label22.config(text = 'Результат: ')
-    #=======================================================================================================
-    def back():
-        dlina.destroy()
-        home()
-    #=======================================================================================================
-    def exit():
-        if askyesno("Выход", "Ты точно хочешь выйти?"):
-            dlina.destroy()
-    #=======================================================================================================
-    def proverca(event):
-        try:
-            if rt.get() == 0:
-                if rt1.get() == 3:
-                    Cm.mm()
-                elif rt1.get() == 5:
-                    Cm.cmVm()
-                elif rt1.get() == 7:
-                    Cm.cmVkm()
-                elif rt1.get() == 9:
-                    Cm.cmVmila()
-                elif rt1.get() == 11:
-                     Cm.cm_v_mormila()
-                elif rt1.get() == 13:
-                    Cm.cmVduim()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-            elif rt.get() == 2:
-                if rt1.get() == 1:
-                    Mm.mmVcm()
-                elif rt1.get() == 5:
-                    Mm.mmVm()
-                elif rt1.get() == 7:
-                    Mm.mmVkm()
-                elif rt1.get() == 9:
-                    Mm.mmVmila()
-                elif rt1.get() == 11:
-                    Mm.mmVmormila()
-                elif rt1.get() == 13:
-                    Mm.mmVduim()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-            elif rt.get() == 4:
-                if rt1.get() == 1:
-                    M.mVcm()
-                elif rt1.get() == 3:
-                    M.mVmm()
-                elif rt1.get() == 7:
-                    M.mVkm()
-                elif rt1.get() == 9:
-                    M.mVmila()
-                elif rt1.get() == 11:
-                    M.mVmormila()
-                elif rt1.get() == 13:
-                    M.mVduim()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-            elif rt.get() == 6:
-                if rt1.get() == 1:
-                    Km.kmVcm()
-                elif rt1.get() == 3:
-                    Km.kmVmm()
-                elif rt1.get() == 5:
-                    Km.kmVm()
-                elif rt1.get() == 9:
-                    Km.kmVmila()
-                elif rt1.get() == 11:
-                    Km.km_V_mor_milla()
-                elif rt1.get() == 13:
-                    Km.kmVduim()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-            elif rt.get() == 8:
-                if rt1.get() == 1:
-                    Mila.milaVcm()
-                elif rt1.get() == 3:
-                    Mila.milaVmm()
-                elif rt1.get() == 5:
-                    Mila.milaVm()
-                elif rt1.get() == 7:
-                    Mila.milaVkm()
-                elif rt1.get() == 11:
-                    Mila.milaVmormila()
-                elif rt1.get() == 13:
-                    Mila.milaVduim()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-            elif rt.get() == 10:
-                if rt1.get() == 1:
-                    Mmm.mmmVcm()
-                elif rt1.get() == 3:
-                    Mmm.mmmVmm()
-                elif rt1.get() == 5:
-                    Mmm.mmmVm()
-                elif rt1.get() == 7:
-                    Mmm.mmmVkm()
-                elif rt1.get() == 9:
-                    Mmm.mmmVmila()
-                elif rt1.get() == 13:
-                    Mmm.mmmVduim()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-            elif rt.get() == 12:
-                if rt1.get() == 1:
-                    Duim.inVcm()
-                elif rt1.get() == 3:
-                    Duim.inVmm()
-                elif rt1.get() == 5:
-                    Duim.inVm()
-                elif rt1.get() == 7:
-                    Duim.inVkm()
-                elif rt1.get() == 9:
-                    Duim.inVmi()
-                elif rt1.get() == 11:
-                    Duim.inVNM()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-        except:
-            EntryA.delete(0, END)
-            showinfo("Ошибка", "Странные данные")
-    #=======================================================================================================
-    def proverca1():
-        try:
-            if rt.get() == 0:
-                if rt1.get() == 3:
-                    Cm.mm()
-                elif rt1.get() == 5:
-                    Cm.cmVm()
-                elif rt1.get() == 7:
-                    Cm.cmVkm()
-                elif rt1.get() == 9:
-                    Cm.cmVmila()
-                elif rt1.get() == 11:
-                     Cm.cm_v_mormila()
-                elif rt1.get() == 13:
-                    Cm.cmVduim()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-            elif rt.get() == 2:
-                if rt1.get() == 1:
-                    Mm.mmVcm()
-                elif rt1.get() == 5:
-                    Mm.mmVm()
-                elif rt1.get() == 7:
-                    Mm.mmVkm()
-                elif rt1.get() == 9:
-                    Mm.mmVmila()
-                elif rt1.get() == 11:
-                    Mm.mmVmormila()
-                elif rt1.get() == 13:
-                    Mm.mmVduim()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-            elif rt.get() == 4:
-                if rt1.get() == 1:
-                    M.mVcm()
-                elif rt1.get() == 3:
-                    M.mVmm()
-                elif rt1.get() == 7:
-                    M.mVkm()
-                elif rt1.get() == 9:
-                    M.mVmila()
-                elif rt1.get() == 11:
-                    M.mVmormila()
-                elif rt1.get() == 13:
-                    M.mVduim()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-            elif rt.get() == 6:
-                if rt1.get() == 1:
-                    Km.kmVcm()
-                elif rt1.get() == 3:
-                    Km.kmVmm()
-                elif rt1.get() == 5:
-                    Km.kmVm()
-                elif rt1.get() == 9:
-                    Km.kmVmila()
-                elif rt1.get() == 11:
-                    Km.km_V_mor_milla()
-                elif rt1.get() == 13:
-                    Km.kmVduim()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-            elif rt.get() == 8:
-                if rt1.get() == 1:
-                    Mila.milaVcm()
-                elif rt1.get() == 3:
-                    Mila.milaVmm()
-                elif rt1.get() == 5:
-                    Mila.milaVm()
-                elif rt1.get() == 7:
-                    Mila.milaVkm()
-                elif rt1.get() == 11:
-                    Mila.milaVmormila()
-                elif rt1.get() == 13:
-                    Mila.milaVduim()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-            elif rt.get() == 10:
-                if rt1.get() == 1:
-                    Mmm.mmmVcm()
-                elif rt1.get() == 3:
-                    Mmm.mmmVmm()
-                elif rt1.get() == 5:
-                    Mmm.mmmVm()
-                elif rt1.get() == 7:
-                    Mmm.mmmVkm()
-                elif rt1.get() == 9:
-                    Mmm.mmmVmila()
-                elif rt1.get() == 13:
-                    Mmm.mmmVduim()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-            elif rt.get() == 12:
-                if rt1.get() == 1:
-                    Duim.inVcm()
-                elif rt1.get() == 3:
-                    Duim.inVmm()
-                elif rt1.get() == 5:
-                    Duim.inVm()
-                elif rt1.get() == 7:
-                    Duim.inVkm()
-                elif rt1.get() == 9:
-                    Duim.inVmi()
-                elif rt1.get() == 11:
-                    Duim.inVNM()
-                else:
-                    rt1.set(' ')
-                    showinfo('?','А тебе не кажется, что это одно и тоже?')
-        except:
-            EntryA.delete(0, END)
-            showinfo("Ошибка", "Странные данные")
-    #=======================================================================================================
-    class Cm():
-        def zero():
-            EntryA.delete(0, END)
-            showinfo("Нуль", "Да, ноль будет( \nУдивительно?")            
-        #============================================
-        def mm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Cm.zero()
-            else:
-                result = a * 10
-                Label22.config(text = 'Результа: ' + str(result) + ' ' + 'mm')
-        #============================================
-        def cmVm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Cm.zero()
-            else:
-                result = a/100
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'm')
-        #============================================
-        def cmVmila():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Cm.zero()
-            else:
-                result = a/160934
-                Label22.config(text = 'Результат: ' + str('{:.7f}'.format(result)) + ' ' + 'mi')              
-        #============================================
-        def cm_v_mormila():
-                a = EntryA.get()
-                a = float(a)
-                if a == 0:
-                    Cm.zero()
-                else:
-                    result = a/185200
-                    Label22.config(text = 'Результат: ' + str('{:.5f}'.format(result) + ' ' + 'NM'))
-        #============================================
-        def cmVkm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Cm.zero()
-            else:
-                result = a/(1*10**5)
-                Label22.config(text = 'Результат: ' + str('{:.5f}'.format(result) + ' ' + 'km'))
-        #============================================
-        def cmVduim():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Dlina.zero()
-            else:
-                result = a/2.54
-                Label22.config(text = 'Результат: ' + str('{:.5f}'.format(result)) + ' ' + 'in')
-        #============================================
-    class Mm():
-        def mmVcm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Mm.zero()
-            else:
-                result = a/10
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'cm')
-        #============================================
-        def mmVmila():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Mm.zero()
-            else:
-                result = a/(1.609*10**6)
-                Label22.config(text = 'Результа: ' + str('{:.7f}'.format(result)) + ' ' + 'mi')
-        #============================================
-        def mmVkm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Mm.zero()
-            else:
-                result = a/(1*10**(-6))
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'km')
-        #============================================
-        def mmVmormila():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Mm.zero()
-            else:
-                result = a/(1.852*10**6)
-                Label22.config(text = 'Результат: ' + str('{:.7f}'.format(result))+ ' ' + 'NM')
-        #============================================
-        def mmVm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Mm.zero()
-            else:
-                result = a/1000
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'm')
-        #============================================
-        def mmVduim():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Mm.zero()
-            else:
-                result = a/25.4
-                Label22.config(text = 'Результат: ' + str('{:.7f}'.format(result)) + ' ' + 'in')
-        #============================================
-        def zero():
-            EntryA.delete(0, END)
-            showinfo("Нуль", "Да, ноль будет( \nУдивительно?")
-        #============================================
-    class M():
-        def mVcm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                M.zero()
-            else:
-                result = a*100
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'cm')   
-        #============================================
-        def mVkm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                M.zero()
-            else:
-                result = a/1000
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'km')
-        #============================================
-        def mVmm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                M.zero()
-            else:
-                result = a*1000
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'mm')
-        #============================================
-        def mVmila():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                M.zero()
-            else:
-                result = a/1609
-                Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.9f}'.format(result)) + ' ' + 'mi')
-        #============================================
-        def mVduim():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                M.zero()
-            else:
-                result = a*39.37
-                Label22.config(text = 'Результат: ' + str('{:.4f}'.format(result) + ' ' + 'in'))
-        #============================================
-        def mVmormila():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                M.zero()
-            else:
-                result = a/1852
-                Label22.config(text = 'Результат: ' + str('{:.9f}'.format(result)) + ' ' + 'NM')
-        #============================================
-        def zero():
-            EntryA.delete(0, END)
-            showinfo("Нуль", "Да, ноль будет( \nУдивительно?")
-        #============================================
-    class Km():
-        def kmVduim():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Km.zero()
-            else:
-                result = a*39370
-                Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.1f}'.format(result)) + ' ' + 'in')
-        #============================================
-        def kmVmm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Km.zero()
-            else:
-                result = a*(1*10**6)
-                Label22.config(text = 'Результат: ' + str('{:.9f}'.format(result)) + ' ' + 'mm')
-        #============================================
-        def kmVm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Km.zero()
-            else:
-                result = a*1000
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'm')
-        #============================================
-        def kmVcm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Km.zero()
-            else:
-                result = a*100000
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'cm')
-        #============================================
-        def kmVm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Km.zero()
-            else:
-                result = a*1000
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'm')
-        #============================================
-        def kmVmila():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Km.zero()
-            else:
-                result = a/1.609
-                Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.6f}'.format(result)) + ' ' + 'mi')
-        #============================================
-        def km_V_mor_milla():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Km.zero()
-            else:
-                result = a/1.852
-                Label22.config(text = 'Результат ' + str('{:.6f}'.format(result)) + ' ' + 'NM')
-        #============================================
-        def zero():
-            EntryA.delete(0, END)
-            showinfo("Нуль", "Да, ноль будет( \nУдивительно?")
-        #============================================
-    class Mila():
-        def milaVcm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Mila.zero()
-            else:
-                result = a*160934
-                Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.0f}'.format(result)) + ' ' + 'cm')
-        #============================================
-        def milaVmm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Mila.zero()
-            else:
-                result = a*(1.609*10**6)
-                Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.6f}'.format(result)) + ' ' + 'mm')
-        #============================================
-        def milaVm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Mila.zero()
-            else:
-                result =  a*1609
-                Label22.config(text = 'Результат: ' + '~' + ' ' + str(('{:.2f}'.format(result)) + ' ' + 'm'))
-        #============================================
-        def milaVkm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Mila.zero()
-            else:
-                result = a*1.609
-                Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.5f}'.format(result)) + ' ' + 'km')
-        #============================================
-        def milaVmormila():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Mila.zero()
-            else:
-                result = a/1.151
-                Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.6f}'.format(result)) + ' ' + 'NM')
-        #============================================
-        def milaVduim():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Mila.zero()
-            else:
-                result = a*63360
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'in')
-        #============================================
-        def zero():
-            EntryA.delete(0, END)
-            showinfo("Нуль", "Да, ноль будет( \nУдивительно?")
-        #============================================
-    class Mmm():
-        def zero():
-            EntryA.delete(0, END)
-            showinfo("Нуль", "Да, ноль будет( \nУдивительно?")
-        #============================================
-        def mmmVcm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                MorMila.zero()
-            else:
-                result = a*185200
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'cm')
-        #============================================
-        def mmmVmm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                MorMila.zero()
-            else:
-                result = a*(1.852*10**6)
-                Label22.config(text = 'Результат: ' + str(result) + ' ' + 'mm')
-        #============================================
-        def mmmVm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                MorMila.zero()
-            else:
-                result = a*1852
-                Label22.config(text = 'Результа: ' + str(result) + ' ' + 'm')
-        #============================================
-        def mmmVmila():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                MorMila.zero()
-            else:
-                result = a*1.151
-                Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.5f}'.format(result)) + ' ' + 'mi')
-        #============================================
-        def mmmVduim():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                MorMila.zero()
-            else:
-                result = a*72913
-                Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.1f}'.format(result)) + ' ' + 'in')
-        #============================================
-        def mmmVkm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                MorMila.zero()
-            else:
-                result = a*1.852
-                Label22.config(text = 'Результат: ' + str('{:.3f}'.format(result)) + ' ' + 'km')
-        #============================================
-    class Duim():
-        def zero():
-            EntryA.delete(0, END)
-            showinfo("Нуль", "Да, ноль будет( \nУдивительно?")
-        #============================================
-        def inVcm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Duim.zero()
-            else:
-                result = a*2.54
-                Label22.config(text = 'Результат: ' + str('{:.4f}'.format(result)) + ' ' + 'cm')
-        #============================================
-        def inVmm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Duim.zero()
-            else:
-                result = a*25.4
-                Label22.config(text = 'Результат: ' + str('{:.1f}'.format(result)) + ' ' + 'mm')
-        #============================================
-        def inVm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Duim.zero()
-            else:
-                result = a/39.37
-                Label22.config(text = 'Результат: ' + str('{:.4f}'.format(result)) + ' ' + 'm')
-        #============================================
-        def inVkm():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Duim.zero()
-            else:
-                result = a/39370
-                Label22.config(text = 'Результат: ' + str('{:.4f}'.format(result)) + ' ' + 'km')
-        #============================================
-        def inVmi():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Duim.zero()
-            else:
-                result = a*63360
-                Label22.config(text = 'Результат: ' + str('{:.6f}'.format(result)) + ' ' + 'mi')
-        #============================================
-        def inVNM():
-            a = EntryA.get()
-            a = float(a)
-            if a == 0:
-                Duim.zero()
-            else:
-                result = a*72913
-                Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.6f}'.format(result)) + ' ' + 'NM')
-        #============================================
-    #=======================================================================================================
-    #Label
-    Label1 = Label(dlina, text = 'Число', font = 'Aril 16').grid(row = 0, sticky = W, padx = 42)
-    Label22 = Label(dlina, text = 'Результат:', font = 'Aril 16')
-    Label22.grid(row = 1, sticky = W)
-    #=======================================================================================================
-    #Entry
-    EntryA = Entry(dlina, width = 60)
-    #EntryB = Entry(dlina, width = 60)
-    #=======================================================================================================
-    EntryA.focus_set()
-    EntryA.grid(row = 0, sticky = W, padx = 115)
-    EntryA.bind('<Return>', proverca)
-    #EntryB.grid(row = 1, sticky = W, padx = 115)
-    #=======================================================================================================
-    #Button
-    #=======================================================================================================
-    #Button Star
-    star = Button(dlina, text = 'Поехали', width = 8, height = 2, command = proverca1).grid(row = 3, sticky = W, padx = 305)
-    sbros1 = Button(dlina, text = 'Сброс', width = 8, height = 2, command = sbros).grid(row = 3, sticky = W, padx = 380)
-    back1 = Button(dlina, text = 'Назад', width = 8, height = 2, command = back).grid(row = 13, sticky = W, padx = 305, pady = 20)
-    exit1 = Button(dlina, text = 'Выход', width = 8, height = 2, command = exit).grid(row = 13, sticky = W, padx = 380)
-    #=======================================================================================================
-    rt = IntVar()
-    rt.set(' ')
-    #=======================================================================================================
-    #столбец один
-    cm = Radiobutton(text = 'сантиметры', variable = rt, value = 0).grid(row = 4, sticky = W, padx = 30, pady = 5)
-    mm = Radiobutton(text = 'миллиметры', variable = rt, value = 2).grid(row = 5, sticky = W, padx = 30, pady = 5)
-    milli = Radiobutton(text = 'метры', variable = rt, value = 4).grid(row = 6, sticky = W, padx = 30, pady = 5)
-    km = Radiobutton(text = 'киллометры', variable = rt, value = 6).grid(row = 7, sticky = W, padx = 30, pady = 5)
-    mila = Radiobutton(text = 'миля', variable = rt, value = 8).grid(row = 8, sticky = W, padx = 30, pady = 5)
-    mormila = Radiobutton(text = 'морская \nмиля', variable = rt, value = 10).grid(row = 9, sticky = W, padx = 30, pady = 5)
-    duim = Radiobutton(text = 'дюйм', variable = rt, value = 12).grid(row = 10, sticky = W, padx = 30, pady = 5)
-    #=======================================================================================================
-    rt1 = IntVar()
-    rt1.set(' ')
-    #=======================================================================================================
-    #столбец два   
-    cm1 = Radiobutton(text = 'сантиметры', variable = rt1, value = 1).grid(row = 4, sticky = W, padx = 320, pady = 5)
-    mm1 = Radiobutton(text =  'миллиметры', variable = rt1, value = 3).grid(row = 5, sticky = W, padx = 320, pady = 5)
-    milli1 = Radiobutton(text = 'метры', variable = rt1, value = 5).grid(row = 6, sticky = W, padx = 320, pady = 5)
-    km1 = Radiobutton(text = 'киллометры', variable = rt1, value = 7).grid(row = 7, sticky = W, padx = 320, pady = 5)
-    mila1 = Radiobutton(text = 'миля', variable = rt1, value = 9).grid(row = 8, sticky = W, padx = 320, pady = 5)
-    mormila1 = Radiobutton(text = 'морская \nмиля', variable = rt1, value = 11).grid(row = 9, sticky = W, padx = 320, pady = 5)
-    duim1 = Radiobutton(text = 'дюйм', variable = rt1, value = 13).grid(row = 10, sticky = W, padx = 320, pady = 5)
-
-    dlina.mainloop()
+#операции                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 #--------------------------------------------------------------------------------------------------------------------------------------------------} 
 def win2():
     tiime = Tk()
@@ -3200,6 +2463,563 @@ def home():
 homein = Tk()
 homein.title('Конвертер велечин')
 
+class Cm():
+    def zero():
+        EntryA.delete(0, END)
+        showinfo("Нуль", "Да, ноль будет( \nУдивительно?")            
+    #============================================
+    def mm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Cm.zero()
+        else:
+            result = a * 10
+            Label22.config(text = 'Результа: ' + str(result) + ' ' + 'mm')
+    #============================================
+    def cmVm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Cm.zero()
+        else:
+            result = a/100
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'm')
+    #============================================
+    def cmVmila():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Cm.zero()
+        else:
+            result = a/160934
+            Label22.config(text = 'Результат: ' + str('{:.7f}'.format(result)) + ' ' + 'mi')              
+    #============================================
+    def cm_v_mormila():
+            a = EntryA.get()
+            a = float(a)
+            if a == 0:
+                Cm.zero()
+            else:
+                result = a/185200
+                Label22.config(text = 'Результат: ' + str('{:.5f}'.format(result) + ' ' + 'NM'))
+    #============================================
+    def cmVkm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Cm.zero()
+        else:
+            result = a/(1*10**5)
+            Label22.config(text = 'Результат: ' + str('{:.5f}'.format(result) + ' ' + 'km'))
+    #============================================
+    def cmVduim():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Dlina.zero()
+        else:
+            result = a/2.54
+            Label22.config(text = 'Результат: ' + str('{:.5f}'.format(result)) + ' ' + 'in')
+    #============================================
+
+class Mm():
+    def mmVcm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Mm.zero()
+        else:
+            result = a/10
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'cm')
+    #============================================
+    def mmVmila():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Mm.zero()
+        else:
+            result = a/(1.609*10**6)
+            Label22.config(text = 'Результа: ' + str('{:.7f}'.format(result)) + ' ' + 'mi')
+    #============================================
+    def mmVkm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Mm.zero()
+        else:
+            result = a/(1*10**(-6))
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'km')
+    #============================================
+    def mmVmormila():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Mm.zero()
+        else:
+            result = a/(1.852*10**6)
+            Label22.config(text = 'Результат: ' + str('{:.7f}'.format(result))+ ' ' + 'NM')
+    #============================================
+    def mmVm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Mm.zero()
+        else:
+            result = a/1000
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'm')
+    #============================================
+    def mmVduim():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Mm.zero()
+        else:
+            result = a/25.4
+            Label22.config(text = 'Результат: ' + str('{:.7f}'.format(result)) + ' ' + 'in')
+    #============================================
+    def zero():
+        EntryA.delete(0, END)
+        showinfo("Нуль", "Да, ноль будет( \nУдивительно?")
+    #============================================
+
+class M():
+    def mVcm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            M.zero()
+        else:
+            result = a*100
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'cm')   
+    #============================================
+    def mVkm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            M.zero()
+        else:
+            result = a/1000
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'km')
+    #============================================
+    def mVmm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            M.zero()
+        else:
+            result = a*1000
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'mm')
+    #============================================
+    def mVmila():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            M.zero()
+        else:
+            result = a/1609
+            Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.9f}'.format(result)) + ' ' + 'mi')
+    #============================================
+    def mVduim():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            M.zero()
+        else:
+            result = a*39.37
+            Label22.config(text = 'Результат: ' + str('{:.4f}'.format(result) + ' ' + 'in'))
+    #============================================
+    def mVmormila():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            M.zero()
+        else:
+            result = a/1852
+            Label22.config(text = 'Результат: ' + str('{:.9f}'.format(result)) + ' ' + 'NM')
+    #============================================
+    def zero():
+        EntryA.delete(0, END)
+        showinfo("Нуль", "Да, ноль будет( \nУдивительно?")
+    #============================================
+
+class Km():
+    def kmVduim():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Km.zero()
+        else:
+            result = a*39370
+            Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.1f}'.format(result)) + ' ' + 'in')
+    #============================================
+    def kmVmm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Km.zero()
+        else:
+            result = a*(1*10**6)
+            Label22.config(text = 'Результат: ' + str('{:.9f}'.format(result)) + ' ' + 'mm')
+    #============================================
+    def kmVm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Km.zero()
+        else:
+            result = a*1000
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'm')
+    #============================================
+    def kmVcm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Km.zero()
+        else:
+            result = a*100000
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'cm')
+    #============================================
+    def kmVm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Km.zero()
+        else:
+            result = a*1000
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'm')
+    #============================================
+    def kmVmila():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Km.zero()
+        else:
+            result = a/1.609
+            Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.6f}'.format(result)) + ' ' + 'mi')
+    #============================================
+    def km_V_mor_milla():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Km.zero()
+        else:
+            result = a/1.852
+            Label22.config(text = 'Результат ' + str('{:.6f}'.format(result)) + ' ' + 'NM')
+    #============================================
+    def zero():
+        EntryA.delete(0, END)
+        showinfo("Нуль", "Да, ноль будет( \nУдивительно?")
+    #============================================
+
+class Mila():
+    def milaVcm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Mila.zero()
+        else:
+            result = a*160934
+            Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.0f}'.format(result)) + ' ' + 'cm')
+    #============================================
+    def milaVmm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Mila.zero()
+        else:
+            result = a*(1.609*10**6)
+            Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.6f}'.format(result)) + ' ' + 'mm')
+    #============================================
+    def milaVm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Mila.zero()
+        else:
+            result =  a*1609
+            Label22.config(text = 'Результат: ' + '~' + ' ' + str(('{:.2f}'.format(result)) + ' ' + 'm'))
+    #============================================
+    def milaVkm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Mila.zero()
+        else:
+            result = a*1.609
+            Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.5f}'.format(result)) + ' ' + 'km')
+    #============================================
+    def milaVmormila():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Mila.zero()
+        else:
+            result = a/1.151
+            Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.6f}'.format(result)) + ' ' + 'NM')
+    #============================================
+    def milaVduim():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Mila.zero()
+        else:
+            result = a*63360
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'in')
+    #============================================
+    def zero():
+        EntryA.delete(0, END)
+        showinfo("Нуль", "Да, ноль будет( \nУдивительно?")
+    #============================================
+
+class Mmm():
+    def zero():
+        EntryA.delete(0, END)
+        showinfo("Нуль", "Да, ноль будет( \nУдивительно?")
+    #============================================
+    def mmmVcm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            MorMila.zero()
+        else:
+            result = a*185200
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'cm')
+    #============================================
+    def mmmVmm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            MorMila.zero()
+        else:
+            result = a*(1.852*10**6)
+            Label22.config(text = 'Результат: ' + str(result) + ' ' + 'mm')
+    #============================================
+    def mmmVm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            MorMila.zero()
+        else:
+            result = a*1852
+            Label22.config(text = 'Результа: ' + str(result) + ' ' + 'm')
+    #============================================
+    def mmmVmila():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            MorMila.zero()
+        else:
+            result = a*1.151
+            Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.5f}'.format(result)) + ' ' + 'mi')
+    #============================================
+    def mmmVduim():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            MorMila.zero()
+        else:
+            result = a*72913
+            Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.1f}'.format(result)) + ' ' + 'in')
+    #============================================
+    def mmmVkm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            MorMila.zero()
+        else:
+            result = a*1.852
+            Label22.config(text = 'Результат: ' + str('{:.3f}'.format(result)) + ' ' + 'km')
+    #============================================
+
+class Duim():
+    def zero():
+        EntryA.delete(0, END)
+        showinfo("Нуль", "Да, ноль будет( \nУдивительно?")
+    #============================================
+    def inVcm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Duim.zero()
+        else:
+            result = a*2.54
+            Label22.config(text = 'Результат: ' + str('{:.4f}'.format(result)) + ' ' + 'cm')
+    #============================================
+    def inVmm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Duim.zero()
+        else:
+            result = a*25.4
+            Label22.config(text = 'Результат: ' + str('{:.1f}'.format(result)) + ' ' + 'mm')
+    #============================================
+    def inVm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Duim.zero()
+        else:
+            result = a/39.37
+            Label22.config(text = 'Результат: ' + str('{:.4f}'.format(result)) + ' ' + 'm')
+    #============================================
+    def inVkm():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Duim.zero()
+        else:
+            result = a/39370
+            Label22.config(text = 'Результат: ' + str('{:.4f}'.format(result)) + ' ' + 'km')
+    #============================================
+    def inVmi():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Duim.zero()
+        else:
+            result = a*63360
+            Label22.config(text = 'Результат: ' + str('{:.6f}'.format(result)) + ' ' + 'mi')
+    #============================================
+    def inVNM():
+        a = EntryA.get()
+        a = float(a)
+        if a == 0:
+            Duim.zero()
+        else:
+            result = a*72913
+            Label22.config(text = 'Результат: ' + '~' + ' ' + str('{:.6f}'.format(result)) + ' ' + 'NM')
+    #============================================
+
+def proverca1():
+        try:
+            if rt.get() == 0:
+                if rt1.get() == 3:
+                    Cm.mm()
+                elif rt1.get() == 5:
+                    Cm.cmVm()
+                elif rt1.get() == 7:
+                    Cm.cmVkm()
+                elif rt1.get() == 9:
+                    Cm.cmVmila()
+                elif rt1.get() == 11:
+                     Cm.cm_v_mormila()
+                elif rt1.get() == 13:
+                    Cm.cmVduim()
+                else:
+                    rt1.set(' ')
+                    showinfo('?','А тебе не кажется, что это одно и тоже?')
+            elif rt.get() == 2:
+                if rt1.get() == 1:
+                    Mm.mmVcm()
+                elif rt1.get() == 5:
+                    Mm.mmVm()
+                elif rt1.get() == 7:
+                    Mm.mmVkm()
+                elif rt1.get() == 9:
+                    Mm.mmVmila()
+                elif rt1.get() == 11:
+                    Mm.mmVmormila()
+                elif rt1.get() == 13:
+                    Mm.mmVduim()
+                else:
+                    rt1.set(' ')
+                    showinfo('?','А тебе не кажется, что это одно и тоже?')
+            elif rt.get() == 4:
+                if rt1.get() == 1:
+                    M.mVcm()
+                elif rt1.get() == 3:
+                    M.mVmm()
+                elif rt1.get() == 7:
+                    M.mVkm()
+                elif rt1.get() == 9:
+                    M.mVmila()
+                elif rt1.get() == 11:
+                    M.mVmormila()
+                elif rt1.get() == 13:
+                    M.mVduim()
+                else:
+                    rt1.set(' ')
+                    showinfo('?','А тебе не кажется, что это одно и тоже?')
+            elif rt.get() == 6:
+                if rt1.get() == 1:
+                    Km.kmVcm()
+                elif rt1.get() == 3:
+                    Km.kmVmm()
+                elif rt1.get() == 5:
+                    Km.kmVm()
+                elif rt1.get() == 9:
+                    Km.kmVmila()
+                elif rt1.get() == 11:
+                    Km.km_V_mor_milla()
+                elif rt1.get() == 13:
+                    Km.kmVduim()
+                else:
+                    rt1.set(' ')
+                    showinfo('?','А тебе не кажется, что это одно и тоже?')
+            elif rt.get() == 8:
+                if rt1.get() == 1:
+                    Mila.milaVcm()
+                elif rt1.get() == 3:
+                    Mila.milaVmm()
+                elif rt1.get() == 5:
+                    Mila.milaVm()
+                elif rt1.get() == 7:
+                    Mila.milaVkm()
+                elif rt1.get() == 11:
+                    Mila.milaVmormila()
+                elif rt1.get() == 13:
+                    Mila.milaVduim()
+                else:
+                    rt1.set(' ')
+                    showinfo('?','А тебе не кажется, что это одно и тоже?')
+            elif rt.get() == 10:
+                if rt1.get() == 1:
+                    Mmm.mmmVcm()
+                elif rt1.get() == 3:
+                    Mmm.mmmVmm()
+                elif rt1.get() == 5:
+                    Mmm.mmmVm()
+                elif rt1.get() == 7:
+                    Mmm.mmmVkm()
+                elif rt1.get() == 9:
+                    Mmm.mmmVmila()
+                elif rt1.get() == 13:
+                    Mmm.mmmVduim()
+                else:
+                    rt1.set(' ')
+                    showinfo('?','А тебе не кажется, что это одно и тоже?')
+            elif rt.get() == 12:
+                if rt1.get() == 1:
+                    Duim.inVcm()
+                elif rt1.get() == 3:
+                    Duim.inVmm()
+                elif rt1.get() == 5:
+                    Duim.inVm()
+                elif rt1.get() == 7:
+                    Duim.inVkm()
+                elif rt1.get() == 9:
+                    Duim.inVmi()
+                elif rt1.get() == 11:
+                    Duim.inVNM()
+                else:
+                    rt1.set(' ')
+                    showinfo('?','А тебе не кажется, что это одно и тоже?')
+        except:
+            EntryA.delete(0, END)
+            showinfo("Ошибка", "Странные данные")
+
+def exit1():
+        if askyesno("Выход", "Ты точно хочешь выйти?"):
+            homein.destroy()
+
+def sbros1():
+    rt.set(' ')
+    rt1.set(' ')
+    EntryA.delete(0, END)
+    Label22.config(text = 'Результат: ')
+
 tab_control = ttk.Notebook(homein)
 tab1 = ttk.Frame(tab_control)
 tab2 = ttk.Frame(tab_control)
@@ -3208,12 +3028,43 @@ tab_control.add(tab2, text = 'Длина')
 
 #dlina
 #label tab2
-Label1 = Label(tab2, text = 'Число', font = 'Aril 16').grid(row = 0, sticky = W, padx = 42)
+Label1 = Label(tab2, text = 'Число', font = 'Aril 16').grid(row = 0, column = 0, sticky = E)
 Label22 = Label(tab2, text = 'Результат:', font = 'Aril 16')
-Label22.grid(row = 1, sticky = W)
+Label22.grid(row = 1, column = 0, columnspan = 4, sticky = W)
 
 #Entry tab2
-EntryA = Entry(tab2, width = 60)
+EntryA = Entry(tab2, width = 40)
+
+EntryA.grid(row = 0, column = 1, columnspan = 3)
+#ntryA.bind('<Return>', proverca)
+
+#Button tab2
+star = Button(tab2, text = 'Поехали', width = 8, command = lambda: proverca1()).grid(row = 0, column = 4, padx = 5)
+sbros1 = Button(tab2, text = 'Сброс', width = 8, command = sbros1).grid(row = 1, column = 4, padx = 5)
+exit1 = Button(tab2, text = 'Выход', width = 8, command = lambda: exit1()).grid(row = 13, column = 4)
+
+#radiobutton
+rt = IntVar()
+rt.set(' ')
+
+cm = Radiobutton(tab2, text = 'сантиметры', variable = rt, value = 0).grid(row = 4, column = 0, sticky = W)
+mm = Radiobutton(tab2, text = 'миллиметры', variable = rt, value = 2).grid(row = 5, column = 0, sticky = W)
+milli = Radiobutton(tab2, text = 'метры', variable = rt, value = 4).grid(row = 6, column = 0, sticky = W)
+km = Radiobutton(tab2, text = 'киллометры', variable = rt, value = 6).grid(row = 7, column = 0, sticky = W)
+mila = Radiobutton(tab2, text = 'миля', variable = rt, value = 8).grid(row = 8, column = 0, sticky = W)
+mormila = Radiobutton(tab2, text = 'морская \nмиля', variable = rt, value = 10).grid(row = 9, column = 0, sticky = W)
+duim = Radiobutton(tab2, text = 'дюйм', variable = rt, value = 12).grid(row = 10, column = 0, sticky = W)
+
+rt1 = IntVar()
+rt1.set(' ')
+
+cm1 = Radiobutton(tab2, text = 'сантиметры', variable = rt1, value = 1).grid(row = 4, column = 4, sticky = W)
+mm1 = Radiobutton(tab2, text =  'миллиметры', variable = rt1, value = 3).grid(row = 5, column = 4, sticky = W)
+milli1 = Radiobutton(tab2, text = 'метры', variable = rt1, value = 5).grid(row = 6, column = 4, sticky = W)
+km1 = Radiobutton(tab2, text = 'киллометры', variable = rt1, value = 7).grid(row = 7, column = 4, sticky = W)
+mila1 = Radiobutton(tab2, text = 'миля', variable = rt1, value = 9).grid(row = 8, column = 4, sticky = W)
+mormila1 = Radiobutton(tab2, text = 'морская \nмиля', variable = rt1, value = 11).grid(row = 9, column = 4, sticky = W)
+duim1 = Radiobutton(tab2, text = 'дюйм', variable = rt1, value = 13).grid(row = 10, column = 4, sticky = W)
 
 
 tab_control.pack(expand = 1, fill = 'both')
