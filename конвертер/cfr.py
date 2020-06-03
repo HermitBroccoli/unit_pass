@@ -4,6 +4,7 @@ from tkinter import *
 from tkinter.messagebox import *
 import tkinter as tk
 import time
+from tkinter import ttk
 
 #time
 #xx = time.localtime()
@@ -3194,4 +3195,26 @@ def home():
     window.mainloop()
 #--------------------------------------------------------------------------------------------------------------------------------------------------}
 #home
-home()
+#home()
+
+homein = Tk()
+homein.title('Конвертер велечин')
+
+tab_control = ttk.Notebook(homein)
+tab1 = ttk.Frame(tab_control)
+tab2 = ttk.Frame(tab_control)
+tab_control.add(tab1, text = 'Начальное окно')
+tab_control.add(tab2, text = 'Длина')
+
+#dlina
+#label tab2
+Label1 = Label(tab2, text = 'Число', font = 'Aril 16').grid(row = 0, sticky = W, padx = 42)
+Label22 = Label(tab2, text = 'Результат:', font = 'Aril 16')
+Label22.grid(row = 1, sticky = W)
+
+#Entry tab2
+EntryA = Entry(tab2, width = 60)
+
+
+tab_control.pack(expand = 1, fill = 'both')
+homein.mainloop()
